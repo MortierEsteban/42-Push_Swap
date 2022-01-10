@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:09:10 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/10 13:08:27 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/10 13:33:14 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int ac, char **av)
 {
 	char	*str;
+	int		*tab;
 
 	str = NULL;
 	if (ac == 1)
@@ -23,6 +24,13 @@ int	main(int ac, char **av)
 		ft_exit();
 	}
 	str = ft_join_ps(ac, av);
-	ft_putstr_fd(str, 1);
+	tab = ft_char_to_int(str);
+	for (int i = 0; i <= ac + 10; i++)
+	{
+		ft_putnbr_fd(tab[i], 1);
+		ft_putchar_fd('\n', 1);
+	}
+	free(str);
+	free(tab);
 	return (0);
 }

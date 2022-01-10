@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:37:16 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/10 13:20:04 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/10 13:39:37 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,21 @@ char	*ft_join_ps(int ac, char **av)
 
 int	*ft_char_to_int(char *s)
 {
-	char **tmp;
-	
+	char	**tmp;
+	int		*tab;
+	int		i;
+
+	i = 0;
 	tmp = NULL;
 	if (!s)
 		ft_exit();
+	tmp = ft_split(s, ' ');
+	while (tmp[i])
+		i++;
+	tab = malloc(sizeof(int) * i);
+	i = -1;
+	while (tmp[++i])
+		tab[i] = ft_atoi(tmp[i]);
+	free(tmp);
+	return (tab);
 }
