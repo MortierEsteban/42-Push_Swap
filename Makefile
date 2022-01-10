@@ -4,7 +4,8 @@ CC		=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 
 SRCS	=	main.c \
-			srcs/parse.c
+			srcs/parse.c \
+			srcs/utils.c
 
 OBJS	=	$(SRCS:.c=.o)
 
