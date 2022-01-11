@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:34:39 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/11 14:52:27 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 15:58:26 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,10 @@ t_stack	fill_tab(int ac, char **av)
 		while (j < cpy.size)
 		{
 			if (st_input.tab[i] == cpy.tab[j])
+			{
 				st_input.tab[i] = j;
+				break ;
+			}
 			j++;
 		}
 		i++;
