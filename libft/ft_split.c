@@ -27,8 +27,6 @@ static size_t	ft_count_w(char const *s, char c)
 			w++;
 		i++;
 	}
-	if (c == ' ')
-		w++;
 	return (w);
 }
 
