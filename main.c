@@ -6,16 +6,16 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:09:10 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/11 16:00:03 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 20:21:39 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "incl/push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_stack stack_a;
-	t_stack stack_b;
+	t_stack	stack_a;
+	t_stack	stack_b;
 
 	if (ac == 1)
 	{
@@ -26,10 +26,10 @@ int main(int ac, char **av)
 	stack_b.tab = malloc(sizeof(int) * stack_a.size);
 	stack_b.tab = init_tab(stack_b.tab, stack_a.size);
 	stack_b.top = -1;
-	//ft_print_tab(stack_a.tab, stack_a.size);
+	// ft_print_tab(stack_a.tab, stack_a.size);
 	radix_sort(&stack_a, &stack_b);
-	ft_printf("Sort done : \n");
-	ft_print_tab(stack_a.tab, stack_a.size);
+	// ft_printf("Sort done : \n");
+	// ft_print_tab(stack_a.tab, stack_a.size);
 	free(stack_a.tab);
 	free(stack_b.tab);
 	return (0);
