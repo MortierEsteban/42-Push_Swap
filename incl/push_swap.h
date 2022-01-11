@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:19:09 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/11 10:19:35 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:16:39 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,8 @@ void	double_revrotate(int *stacka, int *stackb, int *topa, int *topb);
 char	*ft_join(char *s1, char *s2);
 int		ft_isnan(char *s);
 int		*init_tab(int *tab, int size);
+void	radix_sort(t_stack *st_a, t_stack *st_b);
+void	ft_sort(int *tab, int size);
+t_stack	fill_tab(int ac, char **av);
 
 #endif

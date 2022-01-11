@@ -6,10 +6,11 @@ CFLAGS	=	-Wall -Wextra -Werror -g
 SRCS	=	main.c \
 			srcs/parse.c \
 			srcs/utils.c \
+			srcs/radix.c \
 			srcs/stack_actions/push.c \
 			srcs/stack_actions/rotate.c \
 			srcs/stack_actions/swaps.c \
-			srcs/stack_actions/reverse.c
+			srcs/stack_actions/reverse.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
