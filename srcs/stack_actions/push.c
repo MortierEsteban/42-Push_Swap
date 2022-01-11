@@ -12,20 +12,20 @@
 
 #include "../../incl/push_swap.h"
 
-void    push2a(int *stacka, int *stackb, int *topa, int	*topb)
+void	push2a(int *stacka, int *stackb, int *topa, int	*topb)
 {
 	*topa += 1;
 	stacka[*topa] = stackb[*topb];
 	stackb[*topb] = '\0';
 	*topb = (*topb - 1);
-	write(1, "pa\n", 3);
+	ft_putstr_fd("pa\n", 1);
 }
 
-void    push2b(int *stacka, int *stackb, int *topa, int	*topb)
+void	push2b(int *stacka, int *stackb, int *topa, int	*topb)
 {
 	*topb += 1;
 	stackb[*topb] = stacka[*topa];
 	stacka[*topa] = '\0';
 	*topa = (*topa - 1);
-	write(1, "pb\n", 3);
+	ft_putstr_fd("pb\n", 1);
 }

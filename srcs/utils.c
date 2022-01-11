@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:34:39 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/10 16:34:11 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 10:21:32 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@ void	ft_exit(void)
 {
 	ft_putstr_fd("Error.\n", 1);
 	exit(1);
+}
+
+int	*init_tab(int *tab, int size)
+{
+	int	i;
+
+	i = -1;
+	while (++i < size)
+		tab[i] = 0;
+	return (tab);
 }
 
 char	*ft_join(char *s1, char *s2)
@@ -41,6 +51,19 @@ char	*ft_join(char *s1, char *s2)
 	}
 	free(s1);
 	return (txt);
+}
+
+int	ft_isnan(char *s)
+{
+	int	i;
+
+	i = -1;
+	while (s[++i])
+	{
+		if (!ft_isdigit(s[i]) && s[i] != ' ')
+			return (0);
+	}
+	return (1);
 }
 
 void	ft_print_tab(int *tab, int size)

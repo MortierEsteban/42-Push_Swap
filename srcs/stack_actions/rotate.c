@@ -32,10 +32,7 @@ void	rotate(int *stacka, int *topa, char stack)
 	stacka[0] = prevvalue;
 	write(1, "r", 1);
 	if (stack == 'a' || stack == 'b')
-	{
-		write(1, &stack, 1);
-		write(1, "\n", 1);
-	}
+		ft_printf("%c\n", stack);
 }
 
 void	doublerotate(int *stacka, int *stackb, int *topa, int *topb)

@@ -35,6 +35,9 @@ SRCS	= 	ft_atoi.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
 			ft_striteri.c \
+			ft_printf/srcs/ft_printf.c \
+			ft_printf/srcs/ft_process.c \
+			ft_printf/srcs/ft_printf_put.c
 
 SRCS_BONUS =	ft_lstnew.c \
 				ft_lstadd_front.c \

@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:53:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/01/10 16:05:22 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 10:18:21 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,7 @@ void	revrotate(int *stacka, int *topa, char stack)
 	stacka[*topa] = prevvalue;
 	write(1, "r", 1);
 	if (stack == 'a' || stack == 'b')
-	{
-		write(1, "r", 1);
-		write(1, &stack, 1);
-		write(1, "\n", 1);
-	}
+		ft_printf("r%c\n", stack);
 }
 
 void	double_revrotate(int *stacka, int *stackb, int *topa, int *topb)

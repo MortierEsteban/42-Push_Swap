@@ -6,12 +6,11 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:17:56 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/10 16:39:40 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/10 23:38:57 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static void	ft_exit(void)
 {

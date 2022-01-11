@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:19:09 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/10 16:59:34 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 10:19:35 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void	revrotate(int *stacka, int *topa, char stack);
 void	double_revrotate(int *stacka, int *stackb, int *topa, int *topb);
 char	*ft_join(char *s1, char *s2);
 int		ft_isnan(char *s);
+int		*init_tab(int *tab, int size);
 
 #endif

@@ -6,12 +6,11 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:37:16 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/10 17:20:26 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/11 10:42:07 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-#include <string.h>
 
 char	*ft_join_ps(int ac, char **av)
 {
@@ -51,19 +50,6 @@ int	ft_check(char **tmp)
 		i++;
 	}
 	return (0);
-}
-
-int	ft_isnan(char *s)
-{
-	int	i;
-
-	i = -1;
-	while (s[++i])
-	{
-		if (!ft_isdigit(s[i]) && s[i] != ' ')
-			return (0);
-	}
-	return (1);
 }
 
 t_stack	ft_char_to_int(int ac, char **av)

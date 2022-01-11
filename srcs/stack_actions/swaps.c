@@ -12,21 +12,18 @@
 
 #include "../../incl/push_swap.h"
 
-void    swap(int *stack, char name, int top)
+void	swap(int *stack, char name, int top)
 {
 	int		tmp;
 
 	if (top == 0)
-		return;
+		return ;
 	tmp = stack[top];
 	stack[top] = stack[top - 1];
 	stack [top - 1] = tmp;
-	write (1 , "s", 1);
+	write (1, "s", 1);
 	if (name == 'a' || name == 'b')
-	{
-		write (1 , &name, 1);
-		write (1, "\n", 1);
-	}
+		ft_printf("%c\n", name);
 }
 
 void	doubleswap(int	*stacka, int *stackb, int topa, int topb)
