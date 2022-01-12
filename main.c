@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:09:10 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/11 20:21:39 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/12 01:38:40 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(int ac, char **av)
 	stack_b.tab = init_tab(stack_b.tab, stack_a.size);
 	stack_b.top = -1;
 	// ft_print_tab(stack_a.tab, stack_a.size);
+	// dprintf(1, "top = %d\n", stack_a.tab[stack_a.top]);
 	radix_sort(&stack_a, &stack_b);
 	// ft_printf("Sort done : \n");
 	// ft_print_tab(stack_a.tab, stack_a.size);

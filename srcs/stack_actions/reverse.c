@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:53:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/01/11 10:18:21 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/12 01:17:57 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	revrotate(int *stacka, int *topa, char stack)
 		rollup++;
 	}
 	stacka[*topa] = prevvalue;
-	write(1, "r", 1);
 	if (stack == 'a' || stack == 'b')
 		ft_printf("r%c\n", stack);
 }

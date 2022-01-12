@@ -6,15 +6,15 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:03:02 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/11 19:49:33 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/12 01:46:18 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/push_swap.h"
 
-int count_bit(int max)
+int	count_bit(int max)
 {
-	int c_bit;
+	int	c_bit;
 
 	c_bit = 0;
 	while ((max >> c_bit))
@@ -40,9 +40,9 @@ void	radix_sort(t_stack *st_a, t_stack *st_b)
 		{
 			num = st_a->tab[st_a->top];
 			if ((num >> i) & 1)
-				push2b(st_a->tab, st_b->tab, &st_a->top, &st_b->top);
-			else
 				revrotate(st_a->tab, &st_a->top, 'a');
+			else
+				push2b(st_a->tab, st_b->tab, &st_a->top, &st_b->top);
 		}
 		while (st_b->top != -1)
 			push2a(st_a->tab, st_b->tab, &st_a->top, &st_b->top);

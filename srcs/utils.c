@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:34:39 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/11 20:21:35 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/12 01:41:45 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,54 +66,6 @@ int	ft_isnan(char *s)
 	return (1);
 }
 
-void	ft_sort(int *tab, int size)
-{
-	int	i;	
-	int	min;
-
-	i = 0;
-	while (i < size)
-	{
-		if (tab[i] < tab[i - 1] && i != 0)
-		{
-			min = tab[i];
-			tab[i] = tab[i - 1];
-			tab[i - 1] = min;
-			i = 0;
-		}
-		else
-			i++;
-	}
-}
-
-t_stack	fill_tab(int ac, char **av)
-{
-	int		i;
-	int		j;
-	t_stack	cpy;
-	t_stack	st_input;
-
-	i = -1;
-	st_input = ft_char_to_int(ac, av);
-	cpy = ft_char_to_int(ac, av);
-	ft_sort(cpy.tab, cpy.size);
-	while (++i < st_input.size)
-	{
-		j = -1;
-		while (++j < cpy.size)
-		{
-			if (st_input.tab[i] == cpy.tab[j])
-			{
-				// dprintf(1, "%d = %d\n", cpy.tab[j], j);
-				st_input.tab[i] = j;
-				break ;
-			}
-		}
-	}
-	free(cpy.tab);
-	return (st_input);
-}
-
 void	ft_print_tab(int *tab, int size)
 {
 	int	i;
@@ -121,10 +73,11 @@ void	ft_print_tab(int *tab, int size)
 	i = -1;
 	// ft_putstr_fd("Maniere lolo : \n==============\n", 1);
 	while (++i < size)
-		ft_printf("%d\n", tab[i]);
+		ft_printf("%d ", tab[i]);
 	// while (size > 0)
 	// {
 	// 	ft_printf("%d\n", tab[size - 1]);
 	// 	size--;
 	// }
+	ft_putchar_fd('\n', 1);
 }

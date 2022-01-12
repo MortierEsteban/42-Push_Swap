@@ -6,6 +6,7 @@ CFLAGS	=	-Wall -Wextra -Werror -g
 SRCS	=	main.c \
 			srcs/parse.c \
 			srcs/utils.c \
+			srcs/utils2.c \
 			srcs/solvers/radix.c \
 			srcs/stack_actions/push.c \
 			srcs/stack_actions/rotate.c \
