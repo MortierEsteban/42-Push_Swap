@@ -32,6 +32,6 @@ void	doubleswap(int	*stacka, int *stackb, int topa, int topb)
 	{
 		swap(stacka, 0, topa);
 		swap(stackb, 0, topb);
-		write(1, "\n", 1);
+		ft_printf("ss\n");
 	}
 }

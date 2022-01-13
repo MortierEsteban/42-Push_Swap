@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:09:10 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 01:38:40 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/13 11:15:35 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ int	main(int ac, char **av)
 	t_stack	stack_b;
 
 	if (ac == 1)
-	{
-		ft_putstr_fd("Oops something went wrong\n", 1);
-		ft_exit();
-	}
+		exit(1);
 	stack_a = fill_tab(ac, av);
 	stack_b.tab = malloc(sizeof(int) * stack_a.size);
 	stack_b.tab = init_tab(stack_b.tab, stack_a.size);
 	stack_b.top = -1;
-	// ft_print_tab(stack_a.tab, stack_a.size);
-	// dprintf(1, "top = %d\n", stack_a.tab[stack_a.top]);
-	radix_sort(&stack_a, &stack_b);
-	// ft_printf("Sort done : \n");
-	// ft_print_tab(stack_a.tab, stack_a.size);
+	if (stack_a.size == 2)
+		swap(stack_a.tab, 'a', stack_a.top);
+	else if (stack_a.size == 3)
+		ft_case_3(&stack_a);
+	else if (stack_a.size == 5)
+		ft_case_5(&stack_a, &stack_b);
+	else
+		radix_sort(&stack_a, &stack_b);
 	free(stack_a.tab);
 	free(stack_b.tab);
 	return (0);

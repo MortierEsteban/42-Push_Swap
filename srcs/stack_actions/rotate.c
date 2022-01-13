@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 12:22:54 by marvin            #+#    #+#             */
-/*   Updated: 2022/01/10 12:22:54 by marvin           ###   ########.fr       */
+/*   Created: 2022/01/10 15:53:39 by marvin            #+#    #+#             */
+/*   Updated: 2022/01/12 13:04:13 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,30 @@ void	rotate(int *stacka, int *topa, char stack)
 {
 	int	prevvalue;
 	int	tmp;
-	int	rolldown;
+	int	rollup;
 
 	if (topa == 0)
 		return ;
-	rolldown = *topa;
-	prevvalue = stacka[0];
-	while (rolldown > 0)
+	rollup = 0;
+	prevvalue = stacka[*topa];
+	while (rollup < *topa)
 	{
-		tmp = stacka[rolldown];
-		stacka[rolldown] = prevvalue;
+		tmp = stacka[rollup];
+		stacka[rollup] = prevvalue;
 		prevvalue = tmp;
-		rolldown--;
+		rollup++;
 	}
-	stacka[0] = prevvalue;
+	stacka[*topa] = prevvalue;
 	if (stack == 'a' || stack == 'b')
 		ft_printf("r%c\n", stack);
 }
 
-void	doublerotate(int *stacka, int *stackb, int *topa, int *topb)
+void	double_rotate(int *stacka, int *stackb, int *topa, int *topb)
 {
 	if (topa > 0 && topb > 0)
 	{
-		rotate(stacka, topa, 0);
-		rotate(stackb, topb, 0);
-		write(1, "\n", 1);
+		revrotate(stacka, topa, 0);
+		revrotate(stackb, topb, 0);
+		ft_printf("rrr\n");
 	}
 }

@@ -8,10 +8,13 @@ SRCS	=	main.c \
 			srcs/utils.c \
 			srcs/utils2.c \
 			srcs/solvers/radix.c \
+			srcs/solvers/random_three.c \
+			srcs/solvers/random_five.c \
 			srcs/stack_actions/push.c \
 			srcs/stack_actions/rotate.c \
 			srcs/stack_actions/swaps.c \
 			srcs/stack_actions/reverse.c \
+
 
 OBJS	=	$(SRCS:.c=.o)
 

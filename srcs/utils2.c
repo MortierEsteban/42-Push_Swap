@@ -6,13 +6,13 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 01:41:25 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 01:46:03 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/12 16:40:23 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-void	ft_rev_int_tab(int	*tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	i;
 	int	tmp;
@@ -28,7 +28,7 @@ void	ft_rev_int_tab(int	*tab, int size)
 
 void	ft_sort(int *tab, int size)
 {
-	int	i;	
+	int	i;
 	int	min;
 
 	i = 0;
@@ -48,28 +48,64 @@ void	ft_sort(int *tab, int size)
 
 t_stack	fill_tab(int ac, char **av)
 {
-	int		i;
-	int		j;
 	t_stack	cpy;
 	t_stack	st_input;
 
-	i = -1;
 	st_input = ft_char_to_int(ac, av);
+	if (ft_is_sorted(st_input.tab, st_input.size, 'a') == 1)
+		exit(1);
 	cpy = ft_char_to_int(ac, av);
 	ft_sort(cpy.tab, cpy.size);
-	while (++i < st_input.size)
+	ft_new_index(&st_input, &cpy);
+	free(cpy.tab);
+	ft_rev_int_tab(st_input.tab, st_input.size);
+	return (st_input);
+}
+
+void	ft_new_index(t_stack *st_input, t_stack *cpy)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	while (++i < st_input->size)
 	{
 		j = -1;
-		while (++j < cpy.size)
+		while (++j < cpy->size)
 		{
-			if (st_input.tab[i] == cpy.tab[j])
+			if (st_input->tab[i] == cpy->tab[j])
 			{
-				st_input.tab[i] = j;
+				st_input->tab[i] = j;
 				break ;
 			}
 		}
 	}
-	free(cpy.tab);
-	ft_rev_int_tab(st_input.tab, st_input.size);
-	return (st_input);
+}
+
+int	ft_is_sorted(int *tab, int size, char c)
+{
+	int	i;
+
+	i = 0;
+	if (c)
+	{	
+		while (i < size - 1)
+		{
+			if (tab[i] < tab[i + 1])
+				i++;
+			else
+				return (0);
+		}
+	}
+	else
+	{
+		while (i < size - 1)
+		{
+			if (tab[i] > tab[i + 1])
+				i++;
+			else
+				return (0);
+		}	
+	}
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:34:39 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 01:41:45 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/13 12:30:24 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_exit(void)
 {
-	ft_putstr_fd("Error.\n", 1);
+	ft_putstr_fd("Error\n", 1);
 	exit(1);
 }
 
@@ -71,13 +71,10 @@ void	ft_print_tab(int *tab, int size)
 	int	i;
 
 	i = -1;
-	// ft_putstr_fd("Maniere lolo : \n==============\n", 1);
-	while (++i < size)
-		ft_printf("%d ", tab[i]);
-	// while (size > 0)
-	// {
-	// 	ft_printf("%d\n", tab[size - 1]);
-	// 	size--;
-	// }
-	ft_putchar_fd('\n', 1);
+	ft_putstr_fd("\n==============\n", 1);
+	while (size > 0)
+	{
+		ft_printf("%d\n", tab[size - 1]);
+		size--;
+	}
 }

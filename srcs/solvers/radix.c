@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:03:02 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 01:46:18 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/12 13:05:03 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	radix_sort(t_stack *st_a, t_stack *st_b)
 		{
 			num = st_a->tab[st_a->top];
 			if ((num >> i) & 1)
-				revrotate(st_a->tab, &st_a->top, 'a');
+				rotate(st_a->tab, &st_a->top, 'a');
 			else
 				push2b(st_a->tab, st_b->tab, &st_a->top, &st_b->top);
 		}
