@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   random_five.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:48:10 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/13 11:54:03 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/13 13:23:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_case_5(t_stack *st_a, t_stack *st_b)
 {
 	if (st_a->tab[0] == 0)
-		revrotate(st_a->tab, &st_a->top, 'a');
+		revrotate(st_a->tab, st_a->top, 'a');
 	while (st_a->tab[st_a->top] != 0)
-		rotate(st_a->tab, &st_a->top, 'a');
+		rotate(st_a->tab, st_a->top, 'a');
 	if (st_a->tab[st_a->top] == 0)
 		push2b(st_a->tab, st_b->tab, &st_a->top, &st_b->top);
 	while (st_a->tab[st_a->top] != 1)
-		rotate(st_a->tab, &st_a->top, 'a');
+		rotate(st_a->tab, st_a->top, 'a');
 	if (st_a->tab[st_a->top] == 1)
 		push2b(st_a->tab, st_b->tab, &st_a->top, &st_b->top);
 	if (!ft_is_sorted(st_a->tab, st_a->top + 1, 0))

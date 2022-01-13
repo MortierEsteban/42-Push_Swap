@@ -12,7 +12,7 @@
 
 #include "../../incl/push_swap.h"
 
-void	revrotate(int *stacka, int *topa, char stack)
+void	revrotate(int *stacka, int topa, char stack)
 {
 	int	prevvalue;
 	int	tmp;
@@ -20,7 +20,7 @@ void	revrotate(int *stacka, int *topa, char stack)
 
 	if (topa == 0)
 		return ;
-	rolldown = *topa;
+	rolldown = topa;
 	prevvalue = stacka[0];
 	while (rolldown > 0)
 	{
@@ -34,7 +34,7 @@ void	revrotate(int *stacka, int *topa, char stack)
 		ft_printf("rr%c\n", stack);
 }
 
-void	double_revrotate(int *stacka, int *stackb, int *topa, int *topb)
+void	double_revrotate(int *stacka, int *stackb, int topa, int topb)
 {
 	if (topa > 0 && topb > 0)
 	{

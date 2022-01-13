@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:37:16 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 11:51:48 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/13 13:11:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ t_stack	ft_char_to_int(int ac, char **av)
 	if (ft_check(tmp) || !tmp)
 		ft_free(tmp);
 	tab.size = ft_count_tab(tmp);
-	tab.top = ft_count_tab(tmp) - 1;
+	tab.top = tab.size - 1;
 	tab.tab = malloc(sizeof(int) * tab.size);
 	while (tmp[++i])
 	{
