@@ -1,7 +1,7 @@
 NAME	=	push_swap
 RM		=	rm -f
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror -g
+CFLAGS	=	-Wall -Wextra -Werror
 
 SRCS	=	main.c \
 			srcs/parse.c \
