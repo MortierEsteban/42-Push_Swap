@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:48:10 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/13 11:54:03 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/14 09:46:50 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_case_5(t_stack *st_a, t_stack *st_b)
 		rotate(st_a->tab, &st_a->top, 'a');
 	if (st_a->tab[st_a->top] == 0)
 		push2b(st_a->tab, st_b->tab, &st_a->top, &st_b->top);
+	if (st_a->tab[0] == 1)
+		revrotate(st_a->tab, &st_a->top, 'a');
 	while (st_a->tab[st_a->top] != 1)
 		rotate(st_a->tab, &st_a->top, 'a');
 	if (st_a->tab[st_a->top] == 1)
