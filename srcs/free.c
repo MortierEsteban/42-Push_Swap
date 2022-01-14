@@ -18,7 +18,7 @@ void	ft_freestacks(t_stack st_a, t_stack st_b)
 	free (st_b.tab);
 }
 
-void	ft_error(int	flag, t_stack stacka, t_stack stackb)
+void	ft_error(int flag, t_stack stacka, t_stack stackb)
 {
 	if (flag == 0 || flag == 2)
 		ft_freestacks(stacka, stackb);

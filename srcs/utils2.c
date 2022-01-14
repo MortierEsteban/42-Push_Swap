@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 01:41:25 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/13 13:07:46 by marvin           ###   ########.fr       */
+/*   Updated: 2022/01/14 13:21:21 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,10 @@ t_stack	fill_tab(int ac, char **av)
 
 	st_input = ft_char_to_int(ac, av);
 	if (ft_is_sorted(st_input.tab, st_input.size, 'a') == 1)
-		ft_error(1, st_input, st_input);
+	{
+		free(st_input.tab);
+		exit (1);
+	}
 	cpy = ft_char_to_int(ac, av);
 	ft_sort(cpy.tab, cpy.size);
 	ft_new_index(&st_input, &cpy);

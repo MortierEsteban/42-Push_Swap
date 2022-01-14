@@ -6,7 +6,7 @@
 /*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:17:56 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 14:35:04 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/14 13:15:14 by lsidan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static void	ft_exit(void)
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	long	nb;
-	int		sign;
+	int			i;
+	long long	nb;
+	int			sign;
 
 	i = 0;
 	sign = 1;
