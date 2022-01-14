@@ -14,6 +14,7 @@ SRCS	=	main.c \
 			srcs/stack_actions/rotate.c \
 			srcs/stack_actions/swaps.c \
 			srcs/stack_actions/reverse.c \
+			srcs/free.c \
 
 
 OBJS	=	$(SRCS:.c=.o)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:19:09 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/12 16:40:09 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/13 13:22:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	ft_case_3(t_stack *st_a);
 void	ft_case_5(t_stack *st_a, t_stack *st_b);
 
 //PROCESS FUNCTIONS
-void	ft_exit(void);
 void	ft_print_tab(int *tab, int size);
 void	ft_rev_int_tab(int	*tab, int size);
 char	*ft_join_ps(int ac, char **av);
@@ -45,15 +44,20 @@ void	ft_new_index(t_stack *st_input, t_stack *cpy);
 int		ft_is_sorted(int *tab, int size, char c);
 void	ft_push_back(t_stack *st_a, t_stack *st_b);
 
+//SECURITY FUNCTIONS
+void	ft_exit(void);
+void	ft_error(int flag, t_stack stacka, t_stack stackb);
+void	ft_freestacks(t_stack st_a, t_stack st_b);
+
 //SWAP
 void	swap(int *stack, char name, int top);
 void	doubleswap(int	*stacka, int *stackb, int topa, int topb);
 
 //ROTATE
-void	rotate(int *stacka, int *topa, char stack);
-void	double_rotate(int *stacka, int *stackb, int *topa, int *topb);
-void	revrotate(int *stacka, int *topa, char stack);
-void	double_revrotate(int *stacka, int *stackb, int *topa, int *topb);
+void	rotate(int *stacka, int topa, char stack);
+void	double_rotate(int *stacka, int *stackb, int topa, int topb);
+void	revrotate(int *stacka, int topa, char stack);
+void	double_revrotate(int *stacka, int *stackb, int topa, int topb);
 
 //PUSH
 void	push2a(int *stacka, int *stackb, int *topa, int	*topb);

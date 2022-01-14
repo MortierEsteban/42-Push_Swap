@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsidan <lsidan@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:34:39 by lsidan            #+#    #+#             */
-/*   Updated: 2022/01/13 12:30:24 by lsidan           ###   ########.fr       */
+/*   Updated: 2022/01/13 13:14:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,6 @@ int	ft_isnan(char *s)
 
 void	ft_print_tab(int *tab, int size)
 {
-	int	i;
-
-	i = -1;
 	ft_putstr_fd("\n==============\n", 1);
 	while (size > 0)
 	{

@@ -31,6 +31,7 @@
 # Executables
 *.exe
 *.out
+push_swap
 *.app
 push_swap
 *.i*86
